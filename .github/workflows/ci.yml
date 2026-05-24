@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: namu-project
+        working-directory: ./
 
     services:
       mysql:
@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: namu-project/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
